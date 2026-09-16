@@ -80,5 +80,3 @@ Add the following block to your `claude_desktop_config.json`:
 [ RETRIEVAL LATENCY ]  < 65 ms      (Topological edge traversal directly in Neo4j)
 [ REANIMATION INDEX ]  33.2 %       (Ebbinghaus reactivation of dormant relevant edges)
 [ IDENTITY DRIFT    ]  4.5 %        (Constrained within mathematical threshold <= 25.0%)
-[ FAITHFULNESS      ]  98 %         (DeepEval evaluation vs grounded indexed context)
-[ HALLUCINATION RATE]  2 %          (Significantly below industry regulatory thresholds)
