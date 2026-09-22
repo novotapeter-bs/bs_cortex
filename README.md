@@ -8,6 +8,9 @@
 [![Latency](https://img.shields.io/badge/Recall%20Latency-%3C65ms-green.svg)]()
 [![Architecture](https://img.shields.io/badge/Tri--Stream-Stateless-orange.svg)]()
 
+> 📖 **Deep Dive:** Want to understand our tri-stream model, autonomous rest cycles, and dynamic invariant guards?  
+> Read the full [Engineering Whitepaper & Architecture Model (ARCHITECTURE.md)](./ARCHITECTURE.md).
+
 ---
 
 ### Stop AI Amnesia & Specification Drift
@@ -141,3 +144,4 @@ Encountered an issue or have a feature suggestion?
 
 * **Bug Reports & Issues:** [Open an Issue](#)
 * **Status & Portal:** [cortex.bluesynergy.io](https://cortex.bluesynergy.io)
+* For a detailed theoretical and operational breakdown, see our [Engineering Whitepaper (ARCHITECTURE.md)](./ARCHITECTURE.md).
