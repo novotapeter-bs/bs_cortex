@@ -1,8 +1,5 @@
 <div align="center">
 
-# Blue Synergy CORTEX - coming soon...
-
-
 # Blue Synergy Cortex (v3.0) 
 
 > **Long-term, drift-free cognitive memory engine for AI Agents, Cursor IDE, and Claude Desktop via Model Context Protocol (MCP).**
@@ -14,7 +11,7 @@
 ---
 
 ### Stop AI Amnesia & Specification Drift
-
+</div>
 Most memory systems treat everything as fluid vector soup—causing agents to hallucinate, forget strict technical requirements, or confuse user preferences with code specs.
 
 **Blue Synergy Cortex** implements an enterprise-grade **Tri-Stream Architecture** backed by transactional PostgreSQL and Neo4j:
@@ -22,7 +19,7 @@ Most memory systems treat everything as fluid vector soup—causing agents to ha
 2. **Identity Stream:** Deterministic guardrails and behavioral axioms that prevent sycophancy.
 3. **Knowledge Stream (Living Specs):** Exact architecture specifications, hardware limits, and system parameters organized into an immutable **Universal Scientific Ontology**. This stream is **protected against lossy compression, semantic decay, and accidental drift**.
 
-</div>
+
 ---
 
 ## Quickstart (1 Minute Setup)
@@ -80,6 +77,7 @@ B) Add the Cortex remote configuration (other MCP Clients, like Windsurf, VS Cod
     }
   }
 }
+```
 
 ---
 
