@@ -1,4 +1,4 @@
-# Engineering Whitepaper: User Interaction & Cognitive Model 🧠
+# Engineering Whitepaper: User Interaction & Cognitive Model
 
 > **A deep dive into the operational mechanics, tripartite boundary model, and metabolic lifecycle of Blue Synergy Cortex.**
 
@@ -27,7 +27,7 @@ Cortex enforces a strict tripartite boundary:
 Human autobiographical memory is naturally fluid—older episodic details fade into high-level intuition. **Technical project specifications cannot behave this way.** An API contract, a database schema, or a hardware pinout cannot be summarized away without rendering the system useless.
 
 * **Living Canonical Specifications:** Every project is maintained as a canonical, structured document following a 5-part scientific ontology (*Summary, Aim, Materials & Methods, Ideas, Attachments*).
-* **Dual-Zone Fact Ingestion:** New project details added during conversations are appended instantaneously into an isolated staging buffer (`## 📥 NEW NOTES`). The canonical body is never overwritten mid-dialogue, guaranteeing zero drift and zero token corruption by design.
+* **Dual-Zone Fact Ingestion:** New project details added during conversations are appended instantaneously into an isolated staging buffer (`## NEW NOTES`). The canonical body is never overwritten mid-dialogue, guaranteeing zero drift and zero token corruption by design.
 
 ---
 
