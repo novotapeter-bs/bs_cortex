@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cortex": {
+      "url": "https://cortex.bluesynergy.io/v1/mcp/sse?api_key=YOUR_API_KEY",
+      "transport": "sse"
+    }
+  }
+}
