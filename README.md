@@ -22,12 +22,11 @@ Most memory systems treat everything as fluid vector soup—causing agents to ha
 
 ---
 
-## Quickstart (1 Minute Setup)
+### Quickstart (1 Minute Setup)
 
 To use Cortex, you need an API key. 
 👉 **[Get your 21-day Free Trial API Key here](https://cortex.bluesynergy.io)**
 
----
 
 ### 1. Cursor IDE Integration
 
@@ -85,6 +84,21 @@ Use the SSE endpoint directly in your tool's MCP configuration:
 ---
 ### 4. Custom Agents & REST API (LangChain, CrewAI, AutoGen, OpenAI Custom GPTs, LlamaIndex, n8n)
 
+Integrate Cortex directly into your custom pipelines via our sub-65ms REST endpoints:
+* **Interactive API Documentation (Swagger UI):** [https://cortex.bluesynergy.io/docs](https://cortex.bluesynergy.io/docs)
+* **OpenAPI Schema:** [https://cortex.bluesynergy.io/openapi.json](https://cortex.bluesynergy.io/openapi.json)
+
+**Example: Querying Context (cURL)**
+```bash
+curl -X POST https://cortex.bluesynergy.io/v1/recall \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "System database requirements",
+    "user_id": "developer",
+    "agent_id": "backend_agent"
+  }'
+```
 
 ---
 
@@ -94,10 +108,11 @@ Once connected, your AI agent automatically acquires these native tools:
 
 | Tool Name | Type | Description |
 | :--- | :--- | :--- |
-| `cortex_recall` | Query | Zero-LLM sub-65ms semantic & graph recall injecting context into chats. |
-| `cortex_store_memory` | Write | Explicitly store technical requirements, project boundaries, or user rules. |
-| `cortex_get_project_spec` | Inspection | Deterministically read full canonical project specifications bypassing vector drift. |
-| `cortex_triage_general` | Maintenance | Assisted project compaction and knowledge assimilation. |
+| `cortex_recall` | Query | Sub-30ms semantic & graph recall. Injects user bio, active project specs, and knowledge graph relations before generating a response. Always active (even in read-only mode). |
+| `cortex_ingest_turn` | Ingestion | **Mandatory turn logger.** Automatically captures the conversational turn (`user_message` + `assistant_message`) into the async ingestion buffer for nocturnal consolidation. |
+| `cortex_store_memory` | Write | Explicitly saves system constraints, architectural decisions, and project facts directly to a specific `project_id` and `topic`. |
+| `cortex_get_project_spec` | Inspection | Deterministically retrieves the full canonical specification (Living Document) for any project, bypassing vector search limitations. |
+| `cortex_triage_general` | Maintenance | Compaction and migration tool that moves unstructured notes from the `general` incubator into dedicated projects. |
 
 ---
 
