@@ -5,7 +5,7 @@
 > **Long-term, drift-free cognitive memory engine for AI Agents, Cursor IDE, and Claude Desktop via Model Context Protocol (MCP).**
 
 [![MCP Compatible](https://img.shields.io/badge/MCP-FastMCP%20SSE-blue.svg)](https://modelcontextprotocol.io/)
-[![Latency](https://img.shields.io/badge/Recall%20Latency-%3C30ms-green.svg)]()
+[![Latency](https://img.shields.io/badge/Recall%20Latency-%3C65ms-green.svg)]()
 [![Architecture](https://img.shields.io/badge/Tri--Stream-Stateless-orange.svg)]()
 
 ---
@@ -47,7 +47,7 @@ Edit your configuration file:
 * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
-A) Add the Cortex remote configuration (Claude Desktop):
+AAdd the Cortex remote configuration (Claude Desktop):
 
 ```json
 {
@@ -67,7 +67,10 @@ A) Add the Cortex remote configuration (Claude Desktop):
 ```
 Restart Claude Desktop
 
-B) Add the Cortex remote configuration (other MCP Clients, like Windsurf, VS Code Cline, Roo Code, Zed):
+---
+### 3. Other MCP Clients (Windsurf, VS Code Cline, Roo Code, Zed, Cursor)
+
+Use the SSE endpoint directly in your tool's MCP configuration:
 
 ```json
 {
@@ -80,6 +83,10 @@ B) Add the Cortex remote configuration (other MCP Clients, like Windsurf, VS Cod
 ```
 
 ---
+### 4. Custom Agents & REST API (LangChain, CrewAI, AutoGen, OpenAI Custom GPTs, LlamaIndex, n8n)
+
+
+---
 
 ### Available MCP Tools
 
@@ -87,7 +94,7 @@ Once connected, your AI agent automatically acquires these native tools:
 
 | Tool Name | Type | Description |
 | :--- | :--- | :--- |
-| `cortex_recall` | Query | Zero-LLM sub-30ms semantic & graph recall injecting context into chats. |
+| `cortex_recall` | Query | Zero-LLM sub-65ms semantic & graph recall injecting context into chats. |
 | `cortex_store_memory` | Write | Explicitly store technical requirements, project boundaries, or user rules. |
 | `cortex_get_project_spec` | Inspection | Deterministically read full canonical project specifications bypassing vector drift. |
 | `cortex_triage_general` | Maintenance | Assisted project compaction and knowledge assimilation. |
@@ -96,7 +103,7 @@ Once connected, your AI agent automatically acquires these native tools:
 
 ### Core Architecture Highlights
 
-* **Sub-30ms Zero-LLM Recall:** Direct exact-cosine edge matching in Neo4j and indexed PostgreSQL vectors—bypassing heavy runtime LLM keyword extractors.
+* **Sub-65ms Zero-LLM Recall:** Direct exact-cosine edge matching in Neo4j and indexed PostgreSQL vectors—bypassing heavy runtime LLM keyword extractors.
 * **Dual-Zone Fast-Append:** Instant raw fact capture (< 20ms) into an inbox zone, followed by asynchronous consolidation into a structured scientific schema (*Summary*, *Aim*, *Materials & Methods*, *Ideas*, *Attachments*).
 * **Anti-Race Synthesis Guard:** Invariant guard enforcing `facts_volume_ratio >= 0.85`, preventing critical parameter deletions during re-indexing.
 * **Immunity Shield:** Operational errors, tool crashes, and conversational apologies are filtered by design and never corrupted into permanent memory.
