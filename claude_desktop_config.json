@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "cortex": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://cortex.bluesynergy.io/v1/mcp/sse",
+        "--header",
+        "Authorization: Bearer YOUR_API_KEY"
+      ]
+    }
+  }
+}
