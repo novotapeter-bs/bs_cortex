@@ -2,12 +2,13 @@
 
 # Engineering Whitepaper: User Interaction & Cognitive Model
 
-> **A deep dive into the operational mechanics, tripartite boundary model, and metabolic lifecycle of Blue Synergy Cortex.**
+**A deep dive into the operational mechanics, tripartite boundary model, and metabolic lifecycle of Blue Synergy Cortex.**
 
 Standard large language models are stateless by design: each conversational session starts from an absolute vacuum, requiring repetitive prompting, manual context re-injection, and brittle markdown bookkeeping.
 
 **Blue Synergy Cortex** functions as an external, persistent cognitive runtime. Rather than dumping unstructured transcripts into a flat vector index, Cortex isolates human biographical dynamics, agent behavioral boundaries, and technical project parameters into strictly governed streams.
 </div>
+
 ---
 
 ## 1. Architectural Foundation: The Tri-Stream Memory Boundary
