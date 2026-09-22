@@ -30,3 +30,9 @@ Cortex enforces a strict tripartite boundary:
 └─────────────────────────┴────────────────────────┴─────────────────────┘
 
 ```
+# TRI-STREAM ARCHITECTURE BOUNDARY
+
+| USER STREAM<br>*(Cognitive Blueprint)* | IDENTITY STREAM<br>*(Executive Calibration)* | KNOWLEDGE STREAM<br>*(Technical Truth)* |
+| :--- | :--- | :--- |
+| • Problem-solving style<br>• Preferred frameworks<br>• Communicative cadence | • Tone & friction<br>• Alignment axioms<br>• Anti-sycophancy | • Schemas & APIs<br>• Pinouts & configs<br>• Architecture logs |
+| **➔ Generalizes into:**<br>Master Bio Profile | **➔ Deterministic:**<br>Identity Audits | **➔ Invariant:**<br>Living Canonical Specs |
