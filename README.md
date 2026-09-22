@@ -3,7 +3,7 @@
 # Blue Synergy CORTEX - coming soon...
 
 
-# Blue Synergy Cortex (v3.0) 🧠⚡
+# Blue Synergy Cortex (v3.0) 
 
 > **Long-term, drift-free cognitive memory engine for AI Agents, Cursor IDE, and Claude Desktop via Model Context Protocol (MCP).**
 
@@ -25,7 +25,7 @@ Most memory systems treat everything as fluid vector soup—causing agents to ha
 </div>
 ---
 
-## 🚀 Quickstart (1 Minute Setup)
+## Quickstart (1 Minute Setup)
 
 To use Cortex, you need an API key. 
 👉 **[Get your 21-day Free Trial API Key here](https://cortex.bluesynergy.io)**
@@ -68,4 +68,26 @@ Add the Cortex remote configuration:
   }
 }
 ```
-5. Restart Claude Desktop
+Restart Claude Desktop
+
+---
+
+### Available MCP Tools
+
+Once connected, your AI agent automatically acquires these native tools:
+
+| Tool Name | Type | Description |
+| :--- | :--- | :--- |
+| `cortex_recall` | Query | Zero-LLM sub-30ms semantic & graph recall injecting context into chats. |
+| `cortex_store_memory` | Write | Explicitly store technical requirements, project boundaries, or user rules. |
+| `cortex_get_project_spec` | Inspection | Deterministically read full canonical project specifications bypassing vector drift. |
+| `cortex_triage_general` | Maintenance | Assisted project compaction and knowledge assimilation. |
+
+---
+
+### Core Architecture Highlights
+
+* **Sub-30ms Zero-LLM Recall:** Direct exact-cosine edge matching in Neo4j and indexed PostgreSQL vectors—bypassing heavy runtime LLM keyword extractors.
+* **Dual-Zone Fast-Append:** Instant raw fact capture (< 20ms) into an inbox zone, followed by asynchronous consolidation into a structured scientific schema (*Summary*, *Aim*, *Materials & Methods*, *Ideas*, *Attachments*).
+* **Anti-Race Synthesis Guard:** Invariant guard enforcing `facts_volume_ratio >= 0.85`, preventing critical parameter deletions during re-indexing.
+* **Immunity Shield:** Operational errors, tool crashes, and conversational apologies are filtered by design and never corrupted into permanent memory.
