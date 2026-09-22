@@ -24,11 +24,22 @@ Most memory systems treat everything as fluid vector soup—causing agents to ha
 
 ### Quickstart (1 Minute Setup)
 
-To use Cortex, you need an API key. 
-👉 **[Get your 21-day Free Trial API Key here](https://cortex.bluesynergy.io)**
+[!IMPORTANT]
+**API Key Required:** Blue Synergy Cortex is a fully hosted, zero-maintenance cognitive cloud engine. You need an active API key to connect your client.
+ 
+🔑 **[Get your 21-Day Free Trial Key here](https://cortex.bluesynergy.io)**  
+*(Instant activation, no credit card required, includes 500 graph nodes & up to 3 agents).*
 
+---
 
-### 1. Cursor IDE Integration
+### Step 1: Get your API Key
+1. Go to [cortex.bluesynergy.io](https://cortex.bluesynergy.io) and generate your trial key.
+2. Your key will look like: `ctx_live_xxxxxxxxxxxxxxxxxxxxxx`.
+
+---
+### Step 2: Connect your AI agent
+
+### A. Cursor IDE Integration
 
 1. Open **Cursor Settings** (`Ctrl+Shift+J` or `Cmd+Shift+J`).
 2. Navigate to **Features** -> **MCP Servers** -> **Add new MCP server**.
@@ -40,7 +51,7 @@ To use Cortex, you need an API key.
 
 ---
 
-### 2. Claude Desktop Integration
+### B. Claude Desktop Integration
 
 Edit your configuration file:
 * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
@@ -67,7 +78,7 @@ AAdd the Cortex remote configuration (Claude Desktop):
 Restart Claude Desktop
 
 ---
-### 3. Other MCP Clients (Windsurf, VS Code Cline, Roo Code, Zed, Cursor)
+### C. Other MCP Clients (Windsurf, VS Code Cline, Roo Code, Zed, Cursor)
 
 Use the SSE endpoint directly in your tool's MCP configuration:
 
@@ -82,7 +93,7 @@ Use the SSE endpoint directly in your tool's MCP configuration:
 ```
 
 ---
-### 4. Custom Agents & REST API (LangChain, CrewAI, AutoGen, OpenAI Custom GPTs, LlamaIndex, n8n)
+### D. Custom Agents & REST API (LangChain, CrewAI, AutoGen, OpenAI Custom GPTs, LlamaIndex, n8n)
 
 Integrate Cortex directly into your custom pipelines via our sub-65ms REST endpoints:
 * **Interactive API Documentation (Swagger UI):** [https://cortex.bluesynergy.io/docs](https://cortex.bluesynergy.io/docs)
