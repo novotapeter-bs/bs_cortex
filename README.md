@@ -22,6 +22,7 @@ Most memory systems treat everything as fluid vector soup—causing agents to ha
 2. **Identity Stream:** Deterministic guardrails and behavioral axioms that prevent sycophancy.
 3. **Knowledge Stream (Living Specs):** Exact architecture specifications, hardware limits, and system parameters organized into an immutable **Universal Scientific Ontology**. This stream is **protected against lossy compression, semantic decay, and accidental drift**.
 
+</div>
 ---
 
 ## 🚀 Quickstart (1 Minute Setup)
