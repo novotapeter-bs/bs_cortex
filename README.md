@@ -8,7 +8,7 @@
 [![Latency](https://img.shields.io/badge/Recall%20Latency-%3C65ms-green.svg)]()
 [![Architecture](https://img.shields.io/badge/Tri--Stream-Stateless-orange.svg)]()
 
-> 📖 **Deep Dive:** Want to understand our tri-stream model, autonomous rest cycles, and dynamic invariant guards?  
+> **Deep Dive:** Want to understand our tri-stream model, autonomous rest cycles, and dynamic invariant guards?  
 > Read the full [Engineering Whitepaper & Architecture Model (ARCHITECTURE.md)](./ARCHITECTURE.md).
 
 ---
