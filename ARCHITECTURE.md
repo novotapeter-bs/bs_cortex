@@ -39,13 +39,12 @@ Cortex implements a compounding evolutionary pipeline:
 
 ---
 
-### Varianta B: Markdown tabulka
 
 ```markdown
 | PHASE 01: Observation | ➔ | PHASE 02: Consolidation | ➔ | PHASE 03: Aligned Co-Architect |
 | :--- | :---: | :--- | :---: | :--- |
 | **Natural coding & debugging**<br>*(Local episodic encounters)* | | **Nocturnal rest cycles**<br>*(Topological graph linking)* | | **Sub-30ms deterministic recall**<br>*(Zero specification drift)* |
-
+```
 
 ```mermaid
 flowchart LR
