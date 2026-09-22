@@ -108,7 +108,7 @@ Once connected, your AI agent automatically acquires these native tools:
 
 | Tool Name | Type | Description |
 | :--- | :--- | :--- |
-| `cortex_recall` | Query | Sub-30ms semantic & graph recall. Injects user bio, active project specs, and knowledge graph relations before generating a response. Always active (even in read-only mode). |
+| `cortex_recall` | Query | Sub-65ms semantic & graph recall. Injects user bio, active project specs, and knowledge graph relations before generating a response. Always active (even in read-only mode). |
 | `cortex_ingest_turn` | Ingestion | **Mandatory turn logger.** Automatically captures the conversational turn (`user_message` + `assistant_message`) into the async ingestion buffer for nocturnal consolidation. |
 | `cortex_store_memory` | Write | Explicitly saves system constraints, architectural decisions, and project facts directly to a specific `project_id` and `topic`. |
 | `cortex_get_project_spec` | Inspection | Deterministically retrieves the full canonical specification (Living Document) for any project, bypassing vector search limitations. |
