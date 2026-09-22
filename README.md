@@ -50,7 +50,7 @@ Edit your configuration file:
 * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
-Add the Cortex remote configuration:
+A) Add the Cortex remote configuration (Claude Desktop):
 
 ```json
 {
@@ -69,6 +69,17 @@ Add the Cortex remote configuration:
 }
 ```
 Restart Claude Desktop
+
+B) Add the Cortex remote configuration (other MCP Clients, like Windsurf, VS Code Cline, Roo Code, Zed):
+
+```json
+{
+  "mcpServers": {
+    "cortex": {
+      "url": "https://cortex.bluesynergy.io/v1/mcp/sse?api_key=ctx_live_..."
+    }
+  }
+}
 
 ---
 
@@ -91,3 +102,12 @@ Once connected, your AI agent automatically acquires these native tools:
 * **Dual-Zone Fast-Append:** Instant raw fact capture (< 20ms) into an inbox zone, followed by asynchronous consolidation into a structured scientific schema (*Summary*, *Aim*, *Materials & Methods*, *Ideas*, *Attachments*).
 * **Anti-Race Synthesis Guard:** Invariant guard enforcing `facts_volume_ratio >= 0.85`, preventing critical parameter deletions during re-indexing.
 * **Immunity Shield:** Operational errors, tool crashes, and conversational apologies are filtered by design and never corrupted into permanent memory.
+
+---
+
+## Support & Feedback
+
+Encountered an issue or have a feature suggestion?
+
+* **Bug Reports & Issues:** [Open an Issue](#)
+* **Status & Portal:** [cortex.bluesynergy.io](https://cortex.bluesynergy.io)
