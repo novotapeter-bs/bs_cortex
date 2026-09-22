@@ -1,3 +1,5 @@
+<div align="center">
+
 # Engineering Whitepaper: User Interaction & Cognitive Model
 
 > **A deep dive into the operational mechanics, tripartite boundary model, and metabolic lifecycle of Blue Synergy Cortex.**
@@ -5,15 +7,14 @@
 Standard large language models are stateless by design: each conversational session starts from an absolute vacuum, requiring repetitive prompting, manual context re-injection, and brittle markdown bookkeeping.
 
 **Blue Synergy Cortex** functions as an external, persistent cognitive runtime. Rather than dumping unstructured transcripts into a flat vector index, Cortex isolates human biographical dynamics, agent behavioral boundaries, and technical project parameters into strictly governed streams.
-
+</div>
 ---
 
 ## 1. Architectural Foundation: The Tri-Stream Memory Boundary
 
-Naive memory architectures treat conversational text as uniform "vector soup." This inevitably causes catastrophic cross-contamination: personal preferences bleed into database schemas, and transient tool errors pollute the agent's core identity. 
+Naive memory architectures treat conversational text as uniform "vector soup". This inevitably causes catastrophic cross-contamination: personal preferences bleed into database schemas, and transient tool errors pollute the agent's core identity. 
 
 Cortex enforces a strict tripartite boundary:
-
 
 # TRI-STREAM ARCHITECTURE BOUNDARY
 
@@ -26,8 +27,7 @@ Cortex enforces a strict tripartite boundary:
 ### The Invariant Rule of Project Knowledge
 Human autobiographical memory is naturally fluid—older episodic details fade into high-level intuition. **Technical project specifications cannot behave this way.** An API contract, a database schema, or a hardware pinout cannot be summarized away without rendering the system useless.
 
-* **Living Canonical Specifications:** Every project is maintained as a canonical, structured document following a 5-part scientific ontology (*Summary, Aim, Materials & Methods, Ideas, Attachments*).
-* **Dual-Zone Fact Ingestion:** New project details added during conversations are appended instantaneously into an isolated staging buffer (`## NEW NOTES`). The canonical body is never overwritten mid-dialogue, guaranteeing zero drift and zero token corruption by design.
+* **Living Canonical Specifications:** Every project is maintained as a canonical, structured document. New project details added during conversations are appended instantaneously into an isolated staging buffer (`## NEW NOTES`). The canonical body is never overwritten mid-dialogue, guaranteeing zero drift and zero token corruption by design.
 
 ---
 
@@ -37,15 +37,11 @@ Many tools claim to "know you" after filling out a 3-question setup form or inde
 
 Cortex implements a compounding evolutionary pipeline:
 
----
-
-
-
 ```mermaid
 flowchart LR
     P1["**PHASE 01: Observation**<br>Natural coding & debugging<br>*(Local episodic encounters)*"]
     P2["**PHASE 02: Consolidation**<br>Nocturnal rest cycles<br>*(Topological graph linking)*"]
-    P3["**PHASE 03: Aligned Co-Architect**<br>Sub-30ms deterministic recall<br>*(Zero specification drift)*"]
+    P3["**PHASE 03: Aligned Co-Architect**<br>Sub-65ms deterministic recall<br>*(Zero specification drift)*"]
 
     P1 --> P2 --> P3
 ```
@@ -91,17 +87,18 @@ Loose, uncategorized ideas and peripheral thoughts are safely collected in a glo
 
 A simple confirmation seamlessly categorizes the facts without cluttering your main workspace.
 
+---
 ## 4. System Integrity & Continuous Safeguards
 
 A production cognitive architecture must not degrade over hundreds of continuous sessions. Cortex enforces three autonomous guardrails in the background:
 
-### 1. Cognitive Immunity Shield
+### A. Cognitive Immunity Shield
 When language models encounter an internal tool crash or apologize (*"I'm sorry, I made a mistake..."*), naive systems record this behavior. Over time, the agent acquires an artificial inferiority complex. Cortex strictly filters operational errors, ensuring transient runtime failures never pollute long-term identity or user profiles.
 
-### 2. Context Budget Guard
+### B. Context Budget Guard
 Dumping entire project histories into an LLM prompt exhausts tokens and induces model confusion. Cortex serves pre-computed, dense contextual summaries during real-time retrieval (`metadata->>'summary_text'`, max 300 words), leaving **90%+ of the context window open for actual coding**.
 
-### 3. Hermetic Project Boundaries
+### C. Hermetic Project Boundaries
 Project specifications are strictly isolated from one another via central slug normalization (`normalize_project_id`). Technical configurations from *Project Alpha* can never leak into *Project Beta*, and your personal biographical style parameters remain entirely decoupled from technical code specs.
 
 ---
