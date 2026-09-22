@@ -24,7 +24,6 @@ Most memory systems treat everything as fluid vector soup—causing agents to ha
 
 ### Quickstart (1 Minute Setup)
 
-[!IMPORTANT]
 **API Key Required:** Blue Synergy Cortex is a fully hosted, zero-maintenance cognitive cloud engine. You need an active API key to connect your client.
  
 🔑 **[Get your 21-Day Free Trial Key here](https://cortex.bluesynergy.io)**  
