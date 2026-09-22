@@ -18,12 +18,12 @@ Naive memory architectures treat conversational text as uniform "vector soup". T
 Cortex enforces a strict tripartite boundary:
 
 # TRI-STREAM ARCHITECTURE BOUNDARY
-
+<div align="center">
 | USER STREAM<br>*(Cognitive Blueprint)* | IDENTITY STREAM<br>*(Executive Calibration)* | KNOWLEDGE STREAM<br>*(Technical Truth)* |
 | :--- | :--- | :--- |
 | • Problem-solving style<br>• Preferred frameworks<br>• Communicative cadence | • Tone & friction<br>• Alignment axioms<br>• Anti-sycophancy | • Schemas & APIs<br>• Pinouts & configs<br>• Architecture logs |
 | **➔ Generalizes into:**<br>Master Bio Profile | **➔ Deterministic:**<br>Identity Audits | **➔ Invariant:**<br>Living Canonical Specs |
-
+</div>
 
 ### The Invariant Rule of Project Knowledge
 Human autobiographical memory is naturally fluid—older episodic details fade into high-level intuition. **Technical project specifications cannot behave this way.** An API contract, a database schema, or a hardware pinout cannot be summarized away without rendering the system useless.
@@ -37,7 +37,7 @@ Human autobiographical memory is naturally fluid—older episodic details fade i
 Many tools claim to "know you" after filling out a 3-question setup form or indexing a few text files. In reality, deep cognitive alignment cannot be achieved through static configuration. 
 
 Cortex implements a compounding evolutionary pipeline:
-
+<div align="center">
 ```mermaid
 flowchart LR
     P1["**PHASE 01: Observation**<br>Natural coding & debugging<br>*(Local episodic encounters)*"]
@@ -46,7 +46,7 @@ flowchart LR
 
     P1 --> P2 --> P3
 ```
-
+</div>
 ### Phase 01: Empirical Observation (Conversational Phase)
 You never configure the agent manually. You simply work: discuss trade-offs, debug stack traces, and propose architectural blueprints. Cortex records background conversational telemetry, monitoring how you validate arguments and what criteria you prioritize.
 
@@ -105,7 +105,7 @@ Project specifications are strictly isolated from one another via central slug n
 ---
 
 ## 5. System Value: The Net Operational Impact
-
+<div align="center">
 | TRADITIONAL AI SESSIONS | WITH BS CORTEX ENGINE |
 | :--- | :--- |
 | ❌ Briefing churn every morning | ✅ Cumulative persistent context |
@@ -113,7 +113,7 @@ Project specifications are strictly isolated from one another via central slug n
 | ❌ Manual markdown doc bookkeeping | ✅ Autonomous background compaction |
 | ❌ 600ms+ retrieval latency overhead | ✅ Sub-30ms exact-cosine retrieval |
 | ❌ Silent specification drift | ✅ Invariant Token Volume Guard |
-
+</div>
 * **Platform-Agnostic Single Brain:** Context established in Cursor during backend development is immediately accessible when prompting Claude Desktop or triggering sovereign autonomous scripts.
 * **Elimination of Briefing Churn:** Never restate your tech stack, formatting guidelines, or personal preferences. The agent retains your cumulative context across months of collaboration.
 * **Zero-Maintenance Documentation:** Living specifications refactor themselves autonomously in the background, providing verified, structured system documents without manual bookkeeping.
