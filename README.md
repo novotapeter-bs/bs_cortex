@@ -2,13 +2,12 @@
 
 # Blue Synergy Cortex (v3.0) 
 
-[![M8ven Score](https://m8ven.ai/badge/mcp/novotapeter-bs/bs_cortex)](https://m8ven.ai/mcp/novotapeter-bs/bs_cortex)
-
 > **Long-term, drift-free cognitive memory engine for AI Agents, Cursor IDE, and Claude Desktop via Model Context Protocol (MCP).**
 
 [![MCP Compatible](https://img.shields.io/badge/MCP-FastMCP%20SSE-blue.svg)](https://modelcontextprotocol.io/)
 [![Latency](https://img.shields.io/badge/Recall%20Latency-%3C65ms-green.svg)]()
 [![Architecture](https://img.shields.io/badge/Tri--Stream-Stateless-orange.svg)]()
+[![M8ven Score](https://m8ven.ai/badge/mcp/novotapeter-bs/bs_cortex)](https://m8ven.ai/mcp/novotapeter-bs/bs_cortex)
 
 > **Deep Dive:** Want to understand our tri-stream model, autonomous rest cycles, and dynamic invariant guards?  
 > Read the full [Engineering Whitepaper & Architecture Model (ARCHITECTURE.md)](./ARCHITECTURE.md).
