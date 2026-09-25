@@ -127,6 +127,7 @@ Once connected, your AI agent automatically acquires these native tools:
 | `cortex_store_memory` | Write | Explicitly saves system constraints, architectural decisions, and project facts directly to a specific `project_id` and `topic`. |
 | `cortex_get_project_spec` | Inspection | Deterministically retrieves the full canonical specification (Living Document) for any project, bypassing vector search limitations. |
 | `cortex_triage_general` | Maintenance | Compaction and migration tool that moves unstructured notes from the `general` incubator into dedicated projects. |
+| `cortex_manage_draft` | Governance | **Quarantine manager.** Approves isolated project drafts (`draft_*`) into active production canonical specs or permanently purges rejected concepts and temporary graph nodes. |
 
 ---
 
