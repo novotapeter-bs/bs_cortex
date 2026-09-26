@@ -18,7 +18,7 @@
 </div>
 Most memory systems treat everything as fluid vector soup—causing agents to hallucinate, forget strict technical requirements, or confuse user preferences with code specs.
 
-**Blue Synergy Cortex** implements an enterprise-grade **Tri-Stream Architecture** backed by transactional PostgreSQL and Neo4j:
+**Blue Synergy Cortex** implements an enterprise-grade **Tri-Stream Architecture** backed by transactional PostgreSQL and enterprise knowledge graph architecture:
 1. **User Stream:** Generalizes conversational habits and user preferences over time.
 2. **Identity Stream:** Deterministic guardrails and behavioral axioms that prevent sycophancy.
 3. **Knowledge Stream (Living Specs):** Exact architecture specifications, hardware limits, and system parameters organized into an immutable **Universal Scientific Ontology**. This stream is **protected against lossy compression, semantic decay, and accidental drift**.
@@ -60,7 +60,7 @@ Edit your configuration file:
 * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
-AAdd the Cortex remote configuration (Claude Desktop):
+Add the Cortex remote configuration (Claude Desktop):
 
 ```json
 {
@@ -174,10 +174,10 @@ Once the project is approved (via cortex_manage_draft or explicit creation), the
 
 ### Core Architecture Highlights
 
-* **Sub-65ms Zero-LLM Recall:** Direct exact-cosine edge matching in Neo4j and indexed PostgreSQL vectors—bypassing heavy runtime LLM keyword extractors.
-* **Dual-Zone Fast-Append:** Instant raw fact capture (< 20ms) into an inbox zone, followed by asynchronous consolidation into a structured scientific schema (*Summary*, *Aim*, *Materials & Methods*, *Ideas*, *Attachments*).
-* **Anti-Race Synthesis Guard:** Invariant guard enforcing `facts_volume_ratio >= 0.85`, preventing critical parameter deletions during re-indexing.
-* **Immunity Shield:** Operational errors, tool crashes, and conversational apologies are filtered by design and never corrupted into permanent memory.
+* **Sub-65ms Zero-LLM Recall:** Direct high-performance vector and topological graph matching—completely bypassing slow, non-deterministic runtime LLM keyword extractors.
+* **Dual-Zone Fast-Append:** Instant raw fact capture (< 20ms) into an inbox staging zone, followed by scheduled asynchronous consolidation into an immutable, unified Living Specification.
+* **Semantic Invariant Guard:** Algorithmic verification gate that enforces factual density and continuity, mathematically preventing the truncation or loss of critical parameters during re-indexing.
+* **Immunity Shield:** Operational errors, tool crashes, transient hallucinations, and conversational apologies are filtered out by design and never committed to long-term memory.
 
 ---
 
