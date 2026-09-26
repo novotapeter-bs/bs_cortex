@@ -116,18 +116,59 @@ curl -X POST https://cortex.bluesynergy.io/v1/recall \
 
 ---
 
-### Available MCP Tools
+### Available MCP Tools & Lifecycle Architecture
 
-Once connected, your AI agent automatically acquires these native tools:
+Cortex is not a passive key-value store; it is an active cognitive operating system with strict governance boundaries. Understanding **when** and **why** to call each tool ensures high-fidelity memory consolidation.
 
-| Tool Name | Type | Description |
-| :--- | :--- | :--- |
-| `cortex_recall` | Query | Sub-65ms semantic & graph recall. Injects user bio, active project specs, and knowledge graph relations before generating a response. Always active (even in read-only mode). |
-| `cortex_ingest_turn` | Ingestion | **Mandatory turn logger.** Automatically captures the conversational turn (`user_message` + `assistant_message`) into the async ingestion buffer for nocturnal consolidation. |
-| `cortex_store_memory` | Write | Explicitly saves system constraints, architectural decisions, and project facts directly to a specific `project_id` and `topic`. |
-| `cortex_get_project_spec` | Inspection | Deterministically retrieves the full canonical specification (Living Document) for any project, bypassing vector search limitations. |
-| `cortex_triage_general` | Maintenance | Compaction and migration tool that moves unstructured notes from the `general` incubator into dedicated projects. |
-| `cortex_manage_draft` | Governance | **Quarantine manager.** Approves isolated project drafts (`draft_*`) into active production canonical specs or permanently purges rejected concepts and temporary graph nodes. |
+---
+
+#### The Standard Agent Turn Cycle
+For every user turn, your agent should inherently follow this golden loop:
+1. **At turn start:** Call `cortex_recall` to fetch ground-truth context (User Bio + Active Project Specs + Graph Relations).
+2. **Generate response:** Formulate the answer grounded in the retrieved memory.
+3. **At turn end:** Call `cortex_ingest_turn` to send the turn to the asynchronous ingestion buffer.
+
+---
+
+#### Detailed Tool Reference
+
+| Tool Name | Type | When to Call | System Behavior |
+| :--- | :--- | :--- | :--- |
+| `cortex_recall` | Query | **Before answering** the user (mandatory for full context awareness). | Sub-65ms hybrid vector and topological graph search. Automatically injects verified user profile traits, active project specifications, and cross-entity relationships directly into the prompt context. |
+| `cortex_ingest_turn` | Ingestion | **Immediately after answering** every conversational turn. | Asynchronously ingests the full conversational turn. The Memory Firewall filters dialogue noise, learns communication preferences, and stages technical facts for scheduled consolidation. |
+| `cortex_store_memory` | Write | For **explicit system constraints, hard business rules, and technical decisions** that must be guaranteed. | Curated persistent write. **Safety Gate:** If `project_id` is not yet authorized by the user, facts are safely staged in the general memory pool (`general`) to prevent project pollution. |
+| `cortex_get_project_spec` | Inspection | When you need the **complete Living Canonical Specification** of a project. | Deterministically retrieves the verified, unified specification (Living Document) of the project. **Note:** Returns only authorized and consolidated specifications—not unorganized scratchpad notes. |
+| `cortex_manage_draft` | Governance | When a new product or domain is proposed and **awaits explicit user authorization**. | Approves quarantined project drafts (`draft_*`) into active production specifications, or permanently purges rejected concepts. Promotes staged facts from `general` into dedicated project scope. |
+| `cortex_triage_general` | Maintenance | When the unstructured staging pool (`general`) accumulates multi-project notes. | Semantic clustering engine that organizes notes in `general`, pairs them with corresponding projects, and executes workspace compaction. |
+
+---
+### Project Governance & Lifecycle
+
+To prevent memory fragmentation and unauthorized project sprawl, Cortex treats memory with strict governance boundaries:
+
+```text
+[Incoming Note / Message]
+           │
+           ▼
+   Is Project Authorized?
+        ├── NO  ──► Staged in General Pool ('general')
+        │                 │
+        │                 ▼
+        │          Awaits Approval via `cortex_manage_draft`
+        │                 │
+        └── YES ◄─────────┘
+           │
+           ▼
+[Asynchronous Consolidation Cycle]
+           │
+           ▼
+[Active Living Specification & Knowledge Topology]
+```
+---
+###  Why is my project_spec empty after storing notes?
+
+Cortex enforces a Human-in-the-Loop policy. If a project_id has not yet been explicitly authorized by the user, incoming facts are safely staged in the general memory pool to prevent polluting active workspaces.
+Once the project is approved (via cortex_manage_draft or explicit creation), the nocturnal consolidation engine automatically synthesizes these staged notes into the official Living Specification (cortex_get_project_spec).
 
 ---
 
