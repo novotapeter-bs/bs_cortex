@@ -55,7 +55,7 @@ flowchart LR
 You never configure the agent manually. You simply work: discuss trade-offs, debug stack traces, and propose architectural blueprints. Cortex records background conversational telemetry, monitoring how you validate arguments and what criteria you prioritize.
 
 ### Phase 02: Autonomous Consolidation (Idle & Rest Cycles)
-During scheduled rest cycles, Cortex daemons execute multi-tier consolidation passes. The engine constructs an associative graph in **Neo4j**, synthesizes disparate episodic fragments into generalized principles, and refines your cognitive biography in **PostgreSQL**.
+During scheduled rest cycles, Cortex daemons execute multi-tier consolidation passes. The engine refines your cognitive biography, synthesizes episodic fragments into operational principles, and maps high-level system components into an associative knowledge graph.
 
 ### Phase 03: The Calibrated Co-Architect (Long-Term Horizon)
 Over continuous weeks of interaction, the agent shifts from a generic model into an aligned collaborator. It intuitively understands your project abbreviations, respects architectural constraints without prompting, and anticipates your preferred documentation structure.
@@ -101,10 +101,10 @@ A production cognitive architecture must not degrade over hundreds of continuous
 When language models encounter an internal tool crash or apologize (*"I'm sorry, I made a mistake..."*), naive systems record this behavior. Over time, the agent acquires an artificial inferiority complex. Cortex strictly filters operational errors, ensuring transient runtime failures never pollute long-term identity or user profiles.
 
 ### B. Context Budget Guard
-Dumping entire project histories into an LLM prompt exhausts tokens and induces model confusion. Cortex serves pre-computed, dense contextual summaries during real-time retrieval (`metadata->>'summary_text'`, max 300 words), leaving **90%+ of the context window open for actual coding**.
+Dumping entire project histories into an LLM prompt exhausts tokens and induces model confusion. Cortex serves pre-computed, dense contextual summaries during real-time retrieval (max 300 words), leaving 90%+ of the context window open for actual coding, leaving **90%+ of the context window open for actual coding**.
 
 ### C. Hermetic Project Boundaries
-Project specifications are strictly isolated from one another via central slug normalization (`normalize_project_id`). Technical configurations from *Project Alpha* can never leak into *Project Beta*, and your personal biographical style parameters remain entirely decoupled from technical code specs.
+Project specifications are strictly isolated from one another via deterministic slug normalization. Technical configurations from *Project Alpha* can never leak into *Project Beta*, and your personal biographical style parameters remain entirely decoupled from technical code specs.
 
 ---
 
