@@ -21,7 +21,7 @@ Most memory systems treat everything as fluid vector soup—causing agents to ha
 **Blue Synergy Cortex** implements an enterprise-grade **Tri-Stream Architecture** backed by transactional PostgreSQL and enterprise knowledge graph architecture:
 1. **User Stream:** Generalizes conversational habits and user preferences over time.
 2. **Identity Stream:** Deterministic guardrails and behavioral axioms that prevent sycophancy.
-3. **Knowledge Stream (Living Specs):** Exact architecture specifications, hardware limits, and system parameters organized into an immutable **Universal Scientific Ontology**. This stream is **protected against lossy compression, semantic decay, and accidental drift**.
+3. **Knowledge Stream (Living Specs):** Exact architecture specifications, hardware limits, and system parameters organized into an authoritative **Universal Domain Ontology**. This stream is **protected against lossy compression, semantic decay, and accidental drift**.
 
 
 ---
@@ -185,6 +185,6 @@ Once the project is approved (via cortex_manage_draft or explicit creation), the
 
 Encountered an issue or have a feature suggestion?
 
-* **Bug Reports & Issues:** [Open an Issue](#)
+* **Bug Reports & Issues:** [Open an Issue](https://github.com/novotapeter-bs/bs_cortex/issues)
 * **Status & Portal:** [cortex.bluesynergy.io](https://cortex.bluesynergy.io)
 * For a detailed theoretical and operational breakdown, see our [Engineering Whitepaper (ARCHITECTURE.md)](./ARCHITECTURE.md).
