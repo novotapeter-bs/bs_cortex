@@ -134,7 +134,7 @@ For every user turn, your agent should inherently follow this golden loop:
 
 | Tool Name | Type | When to Call | System Behavior |
 | :--- | :--- | :--- | :--- |
-| `cortex_recall` | Query | **Before answering** the user (mandatory for full context awareness). | Sub-65ms hybrid vector and topological graph search. Automatically injects verified user profile traits, active project specifications, and cross-entity relationships directly into the prompt context. |
+| `cortex_recall` | `query` (string)<br>`compact` (bool, optional, default: `false`)<br>`max_facts` (int, optional, default: `8`) | **Before answering** the user (mandatory for full context awareness). | Sub-65ms hybrid vector and topological graph search. Injects verified user traits, active project specifications, and cross-entity graph facts. Set `compact: true` to strip profile preambles and return only high-relevance facts (recommended for CLI / Claude Code). |
 | `cortex_ingest_turn` | Ingestion | **Immediately after answering** every conversational turn. Crucial for agent behavioral distillation and user biography generation. | Asynchronously ingests the full conversational turn. The Memory Firewall filters dialogue noise, learns communication preferences, and stages technical facts for scheduled consolidation. |
 | `cortex_create_project` | Provisioning | When the user **declares, initializes, or approves a new project** scope. | Explicitly registers and authorizes a new canonical `project_id`. Creates the project baseline, prevents future memory writes from falling back into `general`, and automatically adopts related staged notes from the general pool. |
 | `cortex_store_memory` | Write | For **explicit system constraints, business rules, and technical decisions** that must be guaranteed and stored in the KNOWLEDGE stream. | Curated persistent write. **Safety Gate:** If `project_id` is not yet authorized by the user, facts are safely staged in the general memory pool (`general`) to prevent project pollution. |
@@ -155,7 +155,8 @@ To prevent memory fragmentation and unauthorized project sprawl, Cortex treats m
         ├── NO  ──► Staged in General Pool ('general')
         │                 │
         │                 ▼
-        │          Awaits Approval via `cortex_manage_draft`
+        │          Awaits Triage via `cortex_triage_general`
+        │          (or explicitly authorized via `cortex_create_project`)
         │                 │
         └── YES ◄─────────┘
            │
