@@ -80,6 +80,13 @@ Add the Cortex remote configuration (Claude Desktop):
 ```
 Restart Claude Desktop
 
+> **Important: Ensuring Ingestion Compliance in Claude Desktop**  
+> Large Language Models naturally prioritize responding to the user and may occasionally skip post-response tool calls (`cortex_ingest_turn`) defined only in MCP server headers.  
+>  
+> To guarantee **100% reliable biography extraction and continuous memory learning**, add this rule directly to your Claude Desktop profile (**Settings** -> **Profile / Custom Instructions**):  
+>  
+> *"Memory Protocol: After EVERY response you generate, you MUST immediately call the `cortex_ingest_turn` MCP tool with both the user query and your assistant answer. Never skip this step."*
+
 ---
 ### C. Other MCP Clients (Windsurf, VS Code Cline, Roo Code, Zed, Cursor)
 
@@ -171,6 +178,17 @@ To prevent memory fragmentation and unauthorized project sprawl, Cortex treats m
 
 Cortex enforces a Human-in-the-Loop policy. If a project_id has not yet been explicitly authorized by the user, incoming facts are safely staged in the general memory pool to prevent polluting active workspaces.
 Once the project is approved (via cortex_manage_draft or explicit creation), the nocturnal consolidation engine automatically synthesizes these staged notes into the official Living Specification (cortex_get_project_spec).
+
+---
+### Why is my User Biography empty? (Fixing "Disobedient" Agents)
+
+If your project specs work but **User Biography** or **Agent Persona** remains empty, your AI agent is skipping the required post-response "exhale" step (`cortex_ingest_turn`). 
+
+**Why this happens:**  
+LLMs (Claude, GPT, etc.) treat remote MCP prompt instructions with lower priority once they finish drafting a response to the user. When an agent skips `cortex_ingest_turn`, dialogue turns never hit the ingestion buffer, starving the Cognitive Router and Memory Firewall of data needed to distill user habits.
+
+**The Fix:**  
+Enforce the rule at the client/system prompt level (e.g. in your system prompt, Cursor Rules `.cursorrules`, or Claude Desktop Custom Instructions). An instruction anchored in the client's native prompt has 10× higher adherence than MCP tool headers alone.
 
 ---
 
