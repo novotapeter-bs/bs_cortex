@@ -80,12 +80,17 @@ Add the Cortex remote configuration (Claude Desktop):
 ```
 Restart Claude Desktop
 
-> **Important: Ensuring Ingestion Compliance in Claude Desktop**  
-> Large Language Models naturally prioritize responding to the user and may occasionally skip post-response tool calls (`cortex_ingest_turn`) defined only in MCP server headers.  
+> 💡 **Crucial: Preventing Collapsed/Empty Messages in Claude Desktop**  
+> In Claude Desktop, if the assistant writes text *before* calling an MCP tool in the same turn, the desktop UI automatically collapses that text into the tool accordion, making the response appear empty or truncated to the user.  
 >  
-> To guarantee **100% reliable biography extraction and continuous memory learning**, add this rule directly to your Claude Desktop profile (**Settings** -> **Profile / Custom Instructions**):  
+> To guarantee **100% clean UI display** and **continuous memory ingestion**, add this exact rule to your Claude Desktop settings (**Settings** ➡️ **Profile / Custom Instructions**):  
 >  
-> *"Memory Protocol: After EVERY response you generate, you MUST immediately call the `cortex_ingest_turn` MCP tool with both the user query and your assistant answer. Never skip this step."*
+> ```text
+> [CORTEX MEMORY PROTOCOL]
+> 1. Inhale: Call `cortex_recall` before answering whenever historical or project context is needed.
+> 2. Exhale (UI-Safe): Do NOT write conversational text before calling `cortex_ingest_turn`. Always execute the `cortex_ingest_turn` tool call first (passing both the user's prompt and your planned answer).
+> 3. Response: Generate your full substantive answer to the user immediately after the tool completes. This ensures your response displays cleanly in the UI without being collapsed into tool artifacts.
+> ```
 
 ---
 ### C. Other MCP Clients (Windsurf, VS Code Cline, Roo Code, Zed, Cursor)
