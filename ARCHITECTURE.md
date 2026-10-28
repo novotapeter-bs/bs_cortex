@@ -45,7 +45,7 @@ Cortex implements a compounding evolutionary pipeline:
 flowchart LR
     P1["**PHASE 01: Observation**<br>Natural coding & debugging<br>*(Local episodic encounters)*"]
     P2["**PHASE 02: Consolidation**<br>Nocturnal rest cycles<br>*(Topological graph linking)*"]
-    P3["**PHASE 03: Aligned Co-Architect**<br>Sub-65ms deterministic recall<br>*(Zero specification drift)*"]
+    P3["**PHASE 03: Aligned Co-Architect**<br>Sub-120ms deterministic recall<br>*(Zero specification drift)*"]
 
     P1 --> P2 --> P3
 ```
