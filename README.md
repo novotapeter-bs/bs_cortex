@@ -5,7 +5,7 @@
 > **Long-term, drift-free cognitive memory engine for AI Agents, Cursor IDE, and Claude Desktop via Model Context Protocol (MCP).**
 
 [![MCP Compatible](https://img.shields.io/badge/MCP-FastMCP%20SSE-blue.svg)](https://modelcontextprotocol.io/)
-[![Latency](https://img.shields.io/badge/Recall%20Latency-%3C65ms-green.svg)]()
+[![Latency](https://img.shields.io/badge/Recall%20Latency-%3C120ms-green.svg)]()
 [![Architecture](https://img.shields.io/badge/Tri--Stream-Stateless-orange.svg)]()
 [![M8ven Score](https://m8ven.ai/badge/mcp/novotapeter-bs/bs_cortex)](https://m8ven.ai/mcp/novotapeter-bs/bs_cortex)
 
@@ -109,7 +109,7 @@ Use the SSE endpoint directly in your tool's MCP configuration:
 ---
 ### D. Custom Agents & REST API (LangChain, CrewAI, AutoGen, OpenAI Custom GPTs, LlamaIndex, n8n)
 <!-- Dočasně skryto, dokud nebude Swagger na produkci aktivován:
-Integrate Cortex directly into your custom pipelines via our sub-65ms REST endpoints:
+Integrate Cortex directly into your custom pipelines via our sub-120ms REST endpoints:
 * **Interactive API Documentation (Swagger UI):** [https://cortex.bluesynergy.io/docs](https://cortex.bluesynergy.io/docs)
 * **OpenAPI Schema:** [https://cortex.bluesynergy.io/openapi.json](https://cortex.bluesynergy.io/openapi.json)
 -->
@@ -202,7 +202,7 @@ Enforce the rule at the client/system prompt level (e.g. in your system prompt, 
 
 ### Core Architecture Highlights
 
-* **Sub-65ms Zero-LLM Recall:** Direct high-performance vector and topological graph matching—completely bypassing slow, non-deterministic runtime LLM keyword extractors.
+* **Sub-120ms Zero-LLM Recall:** Direct high-performance vector and topological graph matching—completely bypassing slow, non-deterministic runtime LLM keyword extractors.
 * **Dual-Zone Fast-Append:** Instant raw fact capture (< 20ms) into an inbox staging zone, followed by scheduled asynchronous consolidation into an immutable, unified Living Specification.
 * **Semantic Invariant Guard:** Algorithmic verification gate that enforces factual density and continuity, mathematically preventing the truncation or loss of critical parameters during re-indexing.
 * **Immunity Shield:** Operational errors, tool crashes, transient hallucinations, and conversational apologies are filtered out by design and never committed to long-term memory.
