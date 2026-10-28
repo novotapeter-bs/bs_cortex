@@ -106,13 +106,13 @@ Use the SSE endpoint directly in your tool's MCP configuration:
   }
 }
 ```
-
 ---
 ### D. Custom Agents & REST API (LangChain, CrewAI, AutoGen, OpenAI Custom GPTs, LlamaIndex, n8n)
-
+<!-- Dočasně skryto, dokud nebude Swagger na produkci aktivován:
 Integrate Cortex directly into your custom pipelines via our sub-65ms REST endpoints:
 * **Interactive API Documentation (Swagger UI):** [https://cortex.bluesynergy.io/docs](https://cortex.bluesynergy.io/docs)
 * **OpenAPI Schema:** [https://cortex.bluesynergy.io/openapi.json](https://cortex.bluesynergy.io/openapi.json)
+-->
 
 **Example: Querying Context (cURL)**
 ```bash
@@ -148,12 +148,15 @@ For every user turn, your agent should inherently follow this golden loop:
 | :--- | :--- | :--- | :--- |
 | `cortex_recall` | `query` (string)<br>`compact` (bool, optional) | **Before answering** the user (mandatory for full context awareness). | Sub-65ms hybrid vector and topological graph search. Injects verified user traits, active project specifications, and cross-entity graph facts. Set `compact: true` to strip profile preambles and return only high-relevance facts (recommended for CLI / Claude Code). |
 | `cortex_ingest_turn` | Ingestion | **Immediately after answering** every conversational turn. Crucial for agent behavioral distillation and user biography generation. | Asynchronously ingests the full conversational turn. The Memory Firewall filters dialogue noise, learns communication preferences, and stages technical facts for scheduled consolidation. |
+| `cortex_list_projects` | Discovery | **Before creating projects or when the target slug is uncertain.** | Returns all authorized active project workspaces with their canonical IDs, human-readable names, and descriptions. Eliminates slug hallucination and accidental project duplicates. |
 | `cortex_create_project` | Provisioning | When the user **declares, initializes, or approves a new project** scope. | Explicitly registers and authorizes a new canonical `project_id`. Creates the project baseline, prevents future memory writes from falling back into `general`, and automatically adopts related staged notes from the general pool. |
 | `cortex_store_memory` | Write | For **explicit system constraints, business rules, and technical decisions** that must be guaranteed and stored in the KNOWLEDGE stream. | Curated persistent write. **Safety Gate:** If `project_id` is not yet authorized by the user, facts are safely staged in the general memory pool (`general`) to prevent project pollution. |
 | `cortex_get_project_spec` | Inspection | When you need the **complete Living Canonical Specification** of a project. | Deterministically retrieves the verified, unified specification (Living Document) of the project. **Note:** Returns only authorized and consolidated specifications—not unorganized scratchpad notes. |
-| `cortex_manage_draft` | Governance | When a new product or domain is proposed and **awaits explicit user authorization**. | Approves quarantined project drafts (`draft_*`) into active production specifications, or permanently purges rejected concepts. Promotes staged facts from `general` into a dedicated project scope. |
+| `cortex_consolidate_project` | Execution | When the user requests an **immediate update/reconciliation of project specifications**. | Enqueues a 2nd-order consolidation task into the background worker queue (`cortex_task_queue`) to reconcile recent inbox notes into the canonical Living Specification. |
+| `cortex_get_task_status` | Monitoring | When checking if an **asynchronous background consolidation has finished**. | Queries task status by `task_id` or `project_id`. Returns execution state (`PENDING`, `RUNNING`, `COMPLETED`, `FAILED`) and diagnostic error messages if anti-drift verification fails. |
+| `cortex_manage_draft` | Governance | When a new product or domain is proposed and **awaits explicit user authorization**. | Approves quarantined project drafts (`draft_*`) into active production specifications, or permanently purges rejected concepts from PostgreSQL and Neo4j. |
 | `cortex_triage_general` | Maintenance | When the unstructured staging pool (`general`) accumulates multi-project notes. | Semantic clustering engine that organizes notes in `general`, pairs them with corresponding projects, and executes workspace compaction. |
-
+| `cortex_clean_general` | Maintenance | When the user instructs to **reset, clear, or prune the unassigned memory pool**. | Selectively deletes notes from `general` by `topic` or `keyword`, or completely purges the general pool, wipes unassigned graph edges, and resets active conversation buffers. |
 ---
 ### Project Governance & Lifecycle
 
