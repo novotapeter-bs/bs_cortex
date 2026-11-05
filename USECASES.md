@@ -141,3 +141,6 @@ tip-over); hay is stored on pallets under breathable tarps.
 - Round Hay Bale Weight: 350 kg [from: 2026-10-21]
 - Daily Inspection Duration: 30–45 min [from: 2026-10-21]
 ```
+---
+
+#### Don't take our word for it — connect BS Cortex via MCP to your Claude Desktop or Cursor, paste 3 days of your own contradictory project notes, and inspect the resulting specification in Cortex Browser.
