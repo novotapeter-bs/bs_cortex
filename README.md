@@ -8,6 +8,7 @@
 [![Latency](https://img.shields.io/badge/Recall%20Latency-%3C120ms-green.svg)]()
 [![Architecture](https://img.shields.io/badge/Tri--Stream-Stateless-orange.svg)]()
 [![M8ven Score](https://m8ven.ai/badge/mcp/novotapeter-bs/bs_cortex)](https://m8ven.ai/mcp/novotapeter-bs/bs_cortex)
+---
 [![Blue Synergy Cortex MCP server – quality and maintenance score on Glama](https://glama.ai/mcp/servers/novotapeter-bs/bs_cortex/badges/card.svg)](https://glama.ai/mcp/servers/novotapeter-bs/bs_cortex)
 
 > **Deep Dive:** Want to understand our tri-stream model, autonomous rest cycles, and dynamic invariant guards?  
