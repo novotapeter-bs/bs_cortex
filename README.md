@@ -217,3 +217,10 @@ Encountered an issue or have a feature suggestion?
 * **Bug Reports & Issues:** [Open an Issue](https://github.com/novotapeter-bs/bs_cortex/issues)
 * **Status & Portal:** [cortex.bluesynergy.io](https://cortex.bluesynergy.io)
 * For a detailed theoretical and operational breakdown, see our [Engineering Whitepaper (ARCHITECTURE.md)](./ARCHITECTURE.md).
+
+---
+## License & Intellectual Property
+
+* **MCP Client Connector & Configs:** The thin MCP bridge (`server.py`) and client configuration examples in this repository are licensed under the [MIT License](./LICENSE).
+* **Blue Synergy Cortex Engine (Proprietary SaaS):** The underlying cognitive engine, Tri-Stream architecture, consolidation algorithms, whitepaper specifications, and hosted service at [cortex.bluesynergy.io](https://cortex.bluesynergy.io) remain the **exclusive proprietary intellectual property of Blue Synergy** (`Copyright (c) 2025 Blue Synergy. All rights reserved.`).
+* **Restrictions:** Reverse engineering, unauthorized reproduction of backend mechanisms, or abusive automated scraping of the hosted service is strictly prohibited.
