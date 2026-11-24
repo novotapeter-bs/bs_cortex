@@ -10,6 +10,13 @@ Standard large language models are stateless by design: each conversational sess
 </div>
 
 ---
+## License & Intellectual Property
+
+* **MCP Client Connector & Configs:** The thin MCP bridge (`server.py`) and client configuration examples in this repository are licensed under the [MIT License](./LICENSE).
+* **Blue Synergy Cortex Engine (Proprietary SaaS):** The underlying cognitive engine, Tri-Stream architecture, consolidation algorithms, whitepaper specifications, and hosted service at [cortex.bluesynergy.io](https://cortex.bluesynergy.io) remain the **exclusive proprietary intellectual property of Blue Synergy** (`Copyright (c) 2025 Blue Synergy. All rights reserved.`).
+* **Restrictions:** Reverse engineering, unauthorized reproduction of backend mechanisms, or abusive automated scraping of the hosted service is strictly prohibited.
+---
+
 
 ## 1. Architectural Foundation: The Tri-Stream Memory Boundary
 
